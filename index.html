@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer</title>
+    <meta name="title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
+    <meta name="description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+    <meta name="keywords" content="software engineer, .NET Core developer, Spring Boot developer, full stack developer, microservices architecture, web development, Bangladesh">
+    <meta name="author" content="Moonwar Al Wardiful">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
+    <meta property="og:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+    <meta property="og:image" content="https://your-domain.com/Moonwar.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Moonwar Al Wardiful - Software Engineer">
+    <meta property="twitter:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+    <meta property="twitter:image" content="https://your-domain.com/Moonwar.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300ADB5'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white'>MW</text></svg>">
+    
+    <!-- Add canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://your-domain.com/">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="Moonwar.jpg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Moonwar Al Wardiful",
+        "jobTitle": "Software Engineer",
+        "url": "https://your-domain.com",
+        "image": "https://your-domain.com/Moonwar.jpg",
+        "telephone": "+880-1754007526",
+        "email": "nishan.rumc@gmail.com",
+        "description": "Software engineer specializing in .NET Core and Spring Boot development",
+        "sameAs": [
+            "https://github.com/moonwarnishan",
+            "https://linkedin.com/in/moonwar"
+        ],
+        "knowsAbout": [
+            ".NET Core",
+            "Spring Boot",
+            "Microservices Architecture",
+            "Web Development",
+            "Angular",
+            "Docker"
+        ]
+    }
+    </script>
+    <style>
+         :root {
+            --primary: #00ADB5;
+            --dark: #222831;
+            --medium: #393E46;
+            --light: #EEEEEE;
+            --gradient: linear-gradient(135deg, #00ADB5, #00707a);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(34, 40, 49, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,173,181,0.1) 0%, rgba(34,40,49,0) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.2s;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #999;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.4s;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 0.6s;
+        }
+
+        .social-link {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Projects Section */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--medium);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .project-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-header {
+            background: var(--gradient);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-links {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--light);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--dark);
+            transform: rotate(360deg);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(0, 173, 181, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .tech-tag:hover {
+            background: rgba(0, 173, 181, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Certifications Section */
+        .cert-card {
+            background: var(--medium);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cert-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .cert-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-issuer {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .cert-link:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--medium);
+            padding: 2rem;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+        }
+
+        .skill-category.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .skill-item i {
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 6rem 0;
+            background: var(--medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,173,181,0.1) 0%, rgba(34,40,49,0) 100%);
+            z-index: 1;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-text {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #ccc;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,173,181,0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--light);
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s;
+}
+
+.contact-item:hover {
+    color: var(--primary);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-link span {
+    font-size: 1rem;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px rgba(0,173,181,0.3);
+}
+
+    @media (max-width: 768px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .hero-image {
+            order: -1;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+        }
+    }
+            /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--medium);
+                padding: 1rem;
+                flex-direction: column;
+                align-items: center;
+                transform: translateY(-100%);
+                transition: transform 0.3s;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: rgba(34, 40, 49, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: var(--primary);
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1001; /* Keep logo above mobile menu */
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-link {
+        color: var(--light);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 1.1rem;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--primary);
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /* Mobile Menu Button */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--light);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: color 0.3s;
+        z-index: 1001; /* Keep button above mobile menu */
+        padding: 0.5rem;
+    }
+
+    .menu-toggle:hover {
+        color: var(--primary);
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-content {
+            padding: 0 1rem;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(34, 40, 49, 0.98);
+            padding: 5rem 2rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            gap: 2rem;
+        }
+
+        .nav-links.active {
+            transform: translateX(0);
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .nav-link::after {
+            bottom: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="navbar" role="banner">
+        <div class="container nav-content">
+            <h1>
+                <a href="#" class="logo" aria-label="Moonwar Al Wardiful">
+                    Moonwar Al Wardiful
+                </a>
+            </h1>
+            
+            <button class="menu-toggle" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <nav aria-label="Main navigation">
+                <div class="nav-links">
+                    <a target="_blank" 
+                       href="https://drive.google.com/file/d/1VWbRLMBhH4HuY1glp25I_7UJ9jlxljn0/view?usp=sharing" 
+                       class="nav-link" 
+                       rel="noopener noreferrer" 
+                       aria-label="Download Resume">Resume</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="about" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-grid">
+                        <div class="hero-text">
+                            <p class="hero-subtitle">Hi, my name is</p>
+                            <h1 class="hero-title">Moonwar Al Wardiful</h1>
+                            <p class="hero-description">
+                                I'm a software engineer specializing in .NET Core and Spring Boot.
+                                Currently focused on building scalable microservices and modern web applications.
+                            </p>
+                            <div class="contact-info">
+                                <a href="tel:+8801754007526" class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+880-1754007526</span>
+                                </a>
+                                <a href="mailto:nishan.rumc@gmail.com" class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>nishan.rumc@gmail.com</span>
+                                </a>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://github.com/moonwarnishan" class="social-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/moonwar" class="social-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="Moonwar.jpg" alt="Moonwar Al Wardiful" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- KHAJNA Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">KHAJNA - Tax Management</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Comprehensive tax management system using microservices architecture, handling complex inventory operations and tax calculations with high performance.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- CLiCS Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Claims Integrated Care System</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Automated claim processing system for Metlife Bangladesh with document validation, policy verification, and claim amount calculation features.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Web API</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">RabbitMQ</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Real-Time Chat -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Real-Time Chat Application</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/moonwarnishan/Real-Time-Chat-Application" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Real-time communication platform with JWT authentication, instant messaging, and responsive design.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">.NET Core</span>
+                                <span class="tech-tag">SignalR</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">JWT</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Twitter Clone -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Twitter Clone</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/moonwarnishan/Twitter" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Feature-rich social media platform with real-time notifications, user interactions, and message queuing.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">RabbitMQ</span>
+                                <span class="tech-tag">Angular</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Note Management -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Note Management System</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/moonwarnishan/noteManagementSystem" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Note-taking application with user authentication, custom validators, and organizational features.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Angular Guards</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- University Management System -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">University Management System</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/moonwarnishan/UniversityManagementSystem" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Comprehensive university management system with complex entity relationships and business logic.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">Entity Framework</span>
+                                <span class="tech-tag">SQL Server</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="projects-grid">
+                    <!-- SODFC Certification -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Scrum for Ops and DevOps Fundamentals</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                SCRUMstudy - Accreditation Body for Scrum and Agile
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Issued Jan 2024</span>
+                                <span class="tech-tag">ID: 1009661</span>
+                            </div>
+                            <a href="https://www.scrumstudy.com/certification/verify?type=SODFC&number=1009661" 
+                               class="cert-link" target="_blank">
+                                Verify Certification <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- SFC Certification -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Scrum Fundamentals Certified</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                SCRUMstudy - Accreditation Body for Scrum and Agile
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Issued Dec 2023</span>
+                                <span class="tech-tag">ID: 1011466</span>
+                            </div>
+                            <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1011466" 
+                               class="cert-link" target="_blank">
+                                Verify Certification <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- C# Certification -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Foundational C# with Microsoft</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                freeCodeCamp Certification
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Issued Sep 2023</span>
+                            </div>
+                            <a href="https://freecodecamp.org/certification/fcc5eac3318-6271-4c36-a6d8-cba24521eb30/foundational-c-sharp-with-microsoft" 
+                               class="cert-link" target="_blank">
+                                Verify Certification <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Jira Certification -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Jira Fundamentals Badge</h3>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">
+                                Atlassian Certification
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Issued Jun 2022</span>
+                            </div>
+                            <a href="https://university.atlassian.com/student/award/ZAy5QpN61RMt1NQvJThfyQjU" 
+                               class="cert-link" target="_blank">
+                                Verify Certification <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fas fa-code"></i> C#</li>
+                            <li class="skill-item"><i class="fas fa-code"></i> Java</li>
+                            <li class="skill-item"><i class="fas fa-code"></i> TypeScript</li>
+                            <li class="skill-item"><i class="fas fa-code"></i> JavaScript</li>
+                        </ul>
+                    </div>
+    
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fas fa-layer-group"></i> ASP.NET Core</li>
+                            <li class="skill-item"><i class="fas fa-layer-group"></i> Spring Boot</li>
+                            <li class="skill-item"><i class="fas fa-layer-group"></i> Angular</li>
+                            <li class="skill-item"><i class="fas fa-layer-group"></i> Entity Framework</li>
+                        </ul>
+                    </div>
+    
+                    <div class="skill-category">
+                        <h3>Databases & Caching</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fas fa-database"></i> SQL Server</li>
+                            <li class="skill-item"><i class="fas fa-database"></i> PostgreSQL</li>
+                            <li class="skill-item"><i class="fas fa-database"></i> MongoDB</li>
+                            <li class="skill-item"><i class="fas fa-server"></i> Redis</li>
+                        </ul>
+                    </div>
+    
+                    <div class="skill-category">
+                        <h3>DevOps & Tools</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><i class="fab fa-docker"></i> Docker</li>
+                            <li class="skill-item"><i class="fab fa-microsoft"></i> Azure</li>
+                            <li class="skill-item"><i class="fas fa-network-wired"></i> RabbitMQ</li>
+                            <li class="skill-item"><i class="fab fa-git-alt"></i> Git</li>
+                            <li class="skill-item"><i class="fab fa-jira"></i> Jira</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="contact" role="contentinfo">
+        <section id="contact" class="contact">
+            <div class="container contact-content">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-text">
+                    I'm currently looking for new opportunities and my inbox is always open.
+                    Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+                </p>
+                <a href="mailto:nishan.rumc@gmail.com" class="contact-button">
+                    Say Hello <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+    
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px"
+        });
+
+        // Observe elements for animation
+        document.querySelectorAll('.project-card, .skill-category').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const header = document.querySelector('.navbar');
+    let isMenuOpen = false;
+
+    // Toggle menu
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        navLinks.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isMenuOpen);
+        menuToggle.innerHTML = isMenuOpen ? 
+            '<i class="fas fa-times"></i>' : 
+            '<i class="fas fa-bars"></i>';
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    }
+
+    // Click handlers
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) toggleMenu();
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !e.target.closest('.navbar')) {
+            toggleMenu();
+        }
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isMenuOpen) {
+            toggleMenu();
+        }
+    });
+
+    // Navbar scroll effect
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
+            header.style.background = 'rgba(34, 40, 49, 0.98)';
+        } else {
+            header.style.boxShadow = 'none';
+            header.style.background = 'rgba(34, 40, 49, 0.95)';
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+});
+    </script>
+    <script>
+        // Simple performance monitoring
+        window.addEventListener('load', function() {
+            // Record load time
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            console.log('Page load time:', loadTime);
+    
+            // Report Core Web Vitals
+            if ('web-vital' in window) {
+                webVitals.getCLS(console.log);
+                webVitals.getFID(console.log);
+                webVitals.getLCP(console.log);
+            }
+        });
+        </script>
+</body>
+</html>
