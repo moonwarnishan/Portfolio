@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Security Headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+        
+        <!-- Primary Meta Tags -->
+        <title>Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer</title>
+        <meta name="title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
+        <meta name="description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+        <meta name="keywords" content="software engineer, .NET Core developer, Spring Boot developer, full stack developer, microservices architecture, web development, Bangladesh">
+        <meta name="author" content="Moonwar Al Wardiful">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="7 days">
+        <meta name="rating" content="General">
+        <meta name="theme-color" content="#00ADB5">
     
-    <!-- Primary Meta Tags -->
-    <title>Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer</title>
-    <meta name="title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
-    <meta name="description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
-    <meta name="keywords" content="software engineer, .NET Core developer, Spring Boot developer, full stack developer, microservices architecture, web development, Bangladesh">
-    <meta name="author" content="Moonwar Al Wardiful">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
-    <meta property="og:title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
-    <meta property="og:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
-    <meta property="og:image" content="https://your-domain.com/Moonwar.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-domain.com/">
-    <meta property="twitter:title" content="Moonwar Al Wardiful - Software Engineer">
-    <meta property="twitter:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
-    <meta property="twitter:image" content="https://your-domain.com/Moonwar.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300ADB5'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white'>MW</text></svg>">
+        <!-- Trust and Safety Signals -->
+        <meta name="format-detection" content="telephone=no">
+        <link rel="author" href="https://github.com/moonwarnishan">
+        <link rel="me" href="https://linkedin.com/in/moonwar">
     
-    <!-- Add canonical URL to prevent duplicate content issues -->
-    <link rel="canonical" href="https://your-domain.com/">
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="Moonwar.jpg" as="image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://moonwar.dev/">
+        <meta property="og:title" content="Moonwar Al Wardiful - Software Engineer | .NET Core & Spring Boot Developer">
+        <meta property="og:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+        <meta property="og:image" content="https://moonwar.dev/Moonwar.jpg">
+        <meta property="og:locale" content="en_US">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Moonwar Al Wardiful",
-        "jobTitle": "Software Engineer",
-        "url": "https://your-domain.com",
-        "image": "https://your-domain.com/Moonwar.jpg",
-        "telephone": "+880-1754007526",
-        "email": "nishan.rumc@gmail.com",
-        "description": "Software engineer specializing in .NET Core and Spring Boot development",
-        "sameAs": [
-            "https://github.com/moonwarnishan",
-            "https://linkedin.com/in/moonwar"
-        ],
-        "knowsAbout": [
-            ".NET Core",
-            "Spring Boot",
-            "Microservices Architecture",
-            "Web Development",
-            "Angular",
-            "Docker"
-        ]
-    }
-    </script>
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://moonwar.dev/">
+        <meta property="twitter:title" content="Moonwar Al Wardiful - Software Engineer">
+        <meta property="twitter:description" content="Experienced software engineer specializing in .NET Core and Spring Boot development. Expert in building scalable microservices and modern web applications.">
+        <meta property="twitter:image" content="https://moonwar.dev/Moonwar.jpg">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300ADB5'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white'>MW</text></svg>">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://moonwar.dev/">
+    
+        <!-- Resource Hints -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        
+        <!-- Critical Resources -->
+        <link rel="preload" href="Moonwar.jpg" as="image" fetchpriority="high">
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Moonwar Al Wardiful",
+            "jobTitle": "Software Engineer",
+            "url": "https://moonwar.dev",
+            "image": "https://moonwar.dev/Moonwar.jpg",
+            "telephone": "+880-1754007526",
+            "email": "nishan.rumc@gmail.com",
+            "description": "Software engineer specializing in .NET Core and Spring Boot development",
+            "sameAs": [
+                "https://github.com/moonwarnishan",
+                "https://linkedin.com/in/moonwar"
+            ],
+            "knowsAbout": [
+                ".NET Core",
+                "Spring Boot",
+                "Microservices Architecture",
+                "Web Development",
+                "Angular",
+                "Docker"
+            ]
+        }
+        </script>
     <style>
          :root {
             --primary: #00ADB5;
