@@ -158,7 +158,11 @@
                 display: flex;
                 gap: 1.5rem;
             }
-            
+            .blur-content {
+                filter: blur(5px);
+                pointer-events: none;
+                transition: filter 0.3s ease-in-out;
+            }
             .nav-link {
                 color: var(--light);
                 text-decoration: none;
@@ -623,7 +627,7 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: rgba(34, 40, 49, 0.98);
+                    background: rgba(34, 40, 49, 0.95);
                     padding: 4rem 1.5rem 1.5rem;
                     flex-direction: column;
                     align-items: center;
@@ -631,6 +635,7 @@
                     transform: translateX(100%);
                     transition: transform 0.3s ease-in-out;
                     gap: 1.5rem;
+                    z-index: 1000;
                 }
             
                 .nav-links.active {
@@ -638,11 +643,17 @@
                 }
             
                 .nav-link {
-                    font-size: 1rem;
-                    width: 100%;
-                    text-align: center;
-                    padding: 0.75rem;
-                }
+        font-size: 1.1rem;
+        padding: 0.75rem;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(0, 173, 181, 0.1);
+        border-radius: 8px;
+    }
             
                 .timeline-container::after {
                     left: 20px;
@@ -1214,12 +1225,12 @@
             threshold: 0.1,
             rootMargin: "0px"
         });
-
+        
         // Observe elements for animation
         document.querySelectorAll('.project-card, .skill-category').forEach(el => {
             observer.observe(el);
         });
-
+        
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1229,78 +1240,86 @@
                 });
             });
         });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
-            } else {
-                navbar.style.boxShadow = 'none';
+        
+        // Main document ready function
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.navbar');
+            const mainContent = document.querySelector('#main-content');
+            let isMenuOpen = false;
+        
+            // Toggle menu function
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                navLinks.classList.toggle('active');
+                mainContent.classList.toggle('blur-content');
+                menuToggle.setAttribute('aria-expanded', isMenuOpen);
+                menuToggle.innerHTML = isMenuOpen ? 
+                    '<i class="fas fa-times"></i>' : 
+                    '<i class="fas fa-bars"></i>';
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+            }
+        
+            // Click handlers for menu toggle
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMenu();
+            });
+        
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) toggleMenu();
+                });
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (isMenuOpen && !e.target.closest('.navbar')) {
+                    toggleMenu();
+                }
+            });
+        
+            // Handle escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        
+            // Navbar scroll effect
+            function handleScroll() {
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
+                    header.style.background = 'rgba(34, 40, 49, 0.98)';
+                } else {
+                    header.style.boxShadow = 'none';
+                    header.style.background = 'rgba(34, 40, 49, 0.95)';
+                }
+            }
+        
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial call
+        });
+        
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // Record load time
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            console.log('Page load time:', loadTime);
+        
+            // Report Core Web Vitals
+            if ('web-vital' in window) {
+                webVitals.getCLS(console.log);
+                webVitals.getFID(console.log);
+                webVitals.getLCP(console.log);
             }
         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const header = document.querySelector('.navbar');
-    let isMenuOpen = false;
-
-    // Toggle menu
-    function toggleMenu() {
-        isMenuOpen = !isMenuOpen;
-        navLinks.classList.toggle('active');
-        menuToggle.setAttribute('aria-expanded', isMenuOpen);
-        menuToggle.innerHTML = isMenuOpen ? 
-            '<i class="fas fa-times"></i>' : 
-            '<i class="fas fa-bars"></i>';
-        
-        // Prevent body scroll when menu is open
-        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-    }
-
-    // Click handlers
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleMenu();
-    });
-
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (isMenuOpen) toggleMenu();
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (isMenuOpen && !e.target.closest('.navbar')) {
-            toggleMenu();
-        }
-    });
-
-    // Handle escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isMenuOpen) {
-            toggleMenu();
-        }
-    });
-
-    // Navbar scroll effect
-    function handleScroll() {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
-            header.style.background = 'rgba(34, 40, 49, 0.98)';
-        } else {
-            header.style.boxShadow = 'none';
-            header.style.background = 'rgba(34, 40, 49, 0.95)';
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
-});
-    </script>
+        </script>
     <script>
         // Simple performance monitoring
         window.addEventListener('load', function() {
