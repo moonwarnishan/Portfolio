@@ -781,6 +781,7 @@
                        rel="noopener noreferrer" 
                        aria-label="Download Resume">Resume</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#certifications" class="nav-link">Certifications</a>
                     <a href="#skills" class="nav-link">Skills</a>
@@ -831,6 +832,247 @@
             </div>
         </section>
     
+        <section id="experience" class="section" aria-label="Work Experience">
+            <style>
+                .timeline-container {
+                    position: relative;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 40px 0;
+                }
+        
+                .timeline-container::after {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    background: var(--primary);
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0.3;
+                }
+        
+                .timeline-item {
+                    position: relative;
+                    width: 100%;
+                    padding: 15px 0;
+                }
+        
+                .timeline-content {
+                    position: relative;
+                    width: calc(50% - 30px);
+                    margin-left: auto;
+                    padding: 20px;
+                    background: var(--medium);
+                    border-radius: 15px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                }
+        
+                .timeline-item:nth-child(odd) .timeline-content {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+        
+                .timeline-content:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2);
+                }
+        
+                .timeline-date {
+                    position: absolute;
+                    top: 20px;
+                    width: 40px;
+                    height: 40px;
+                    background: var(--primary);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    z-index: 1;
+                }
+        
+                .timeline-item:nth-child(odd) .timeline-date {
+                    right: calc(-40px - 30px);
+                }
+        
+                .timeline-item:nth-child(even) .timeline-date {
+                    left: calc(-40px - 30px);
+                }
+        
+                .timeline-title {
+                    font-size: 1.5rem;
+                    color: var(--primary);
+                    margin-bottom: 10px;
+                }
+        
+                .timeline-company {
+                    font-size: 1.1rem;
+                    color: var(--light);
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+        
+                .timeline-company i {
+                    color: var(--primary);
+                }
+        
+                .timeline-description {
+                    color: #ccc;
+                    margin-bottom: 15px;
+                }
+        
+                .achievement-list {
+                    list-style: none;
+                    padding: 0;
+                }
+        
+                .achievement-item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    background: rgba(0, 173, 181, 0.05);
+                    border-radius: 8px;
+                    transition: all 0.3s ease;
+                }
+        
+                .achievement-item:hover {
+                    background: rgba(0, 173, 181, 0.1);
+                    transform: translateX(5px);
+                }
+        
+                .achievement-item i {
+                    color: var(--primary);
+                    margin-top: 4px;
+                }
+        
+                .tech-badges {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+        
+                .tech-badge {
+                    padding: 5px 12px;
+                    background: rgba(0, 173, 181, 0.1);
+                    color: var(--primary);
+                    border-radius: 15px;
+                    font-size: 0.9rem;
+                    transition: all 0.3s ease;
+                }
+        
+                .tech-badge:hover {
+                    background: rgba(0, 173, 181, 0.2);
+                    transform: translateY(-2px);
+                }
+        
+                @media (max-width: 768px) {
+                    .timeline-container::after {
+                        left: 20px;
+                    }
+        
+                    .timeline-content {
+                        width: calc(100% - 50px);
+                        margin-left: 50px !important;
+                    }
+        
+                    .timeline-date {
+                        left: 0 !important;
+                    }
+                }
+            </style>
+        
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline-container">
+                    <!-- Brain Station-23 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Associate Software Engineer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Brain Station-23
+                                <span class="tech-badge">Feb 2023 - Present</span>
+                            </div>
+                            <p class="timeline-description">
+                                Leading backend development initiatives and contributing to enterprise-level solutions. Specializing in microservices architecture and cloud-native applications.
+                            </p>
+                            <ul class="achievement-list">
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Developed and maintained scalable microservices architecture, improving system performance and reliability</span>
+                                </li>
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Implemented distributed caching and message queue systems to enhance application efficiency</span>
+                                </li>
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Collaborated with cross-functional teams to deliver high-quality software solutions on schedule</span>
+                                </li>
+                            </ul>
+                            <div class="tech-badges">
+                                <span class="tech-badge">.NET Core</span>
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Redis</span>
+                                <span class="tech-badge">RabbitMQ</span>
+                                <span class="tech-badge">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Prime Tech Solutions -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Software Engineer Intern</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Prime Tech Solutions
+                                <span class="tech-badge">Sept 2022 - Jan 2023</span>
+                            </div>
+                            <p class="timeline-description">
+                                Gained hands-on experience in full-stack development while working on customer-facing applications and internal tools.
+                            </p>
+                            <ul class="achievement-list">
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Developed and maintained full-stack applications using modern web technologies</span>
+                                </li>
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Implemented responsive UI designs and optimized frontend performance</span>
+                                </li>
+                                <li class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Collaborated with senior developers to implement best practices in code organization and documentation</span>
+                                </li>
+                            </ul>
+                            <div class="tech-badges">
+                                <span class="tech-badge">.NET Core</span>
+                                <span class="tech-badge">Angular</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="section">
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
@@ -974,7 +1216,7 @@
                 </div>
             </div>
         </section>
-    
+
         <section id="certifications" class="section">
             <div class="container">
                 <h2 class="section-title">Certifications</h2>
