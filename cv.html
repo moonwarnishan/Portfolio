@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonwar Al Wardiful - Software Engineer II - CV</title>
+    
+    <style>
+        /* CSS Variables for easy theming */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --text-light: #555;
+            --border-color: #ddd;
+            --bg-light: #f8f9fa;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.4;
+            color: var(--text-color);
+            background: white;
+            font-size: 10pt;
+        }
+
+        /* Container for A4 size */
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 10mm 15mm;
+            position: relative;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .cv-container {
+                max-width: 100%;
+                padding: 10mm 15mm;
+                margin: 0;
+                page-break-after: avoid;
+            }
+            
+            .download-btn {
+                display: none !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            .experience-item, .project-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .name {
+            font-size: 20pt;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .title {
+            font-size: 11pt;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 9pt;
+            color: var(--text-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--border-color);
+            letter-spacing: 0.5px;
+        }
+
+        /* Professional Summary */
+        .summary {
+            text-align: justify;
+            color: var(--text-color);
+            margin-bottom: 3px;
+            line-height: 1.3;
+            font-size: 9pt;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 8px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 9.5pt;
+            color: var(--text-color);
+        }
+
+        .company {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 8.5pt;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .description {
+            color: var(--text-color);
+            margin-bottom: 2px;
+            text-align: justify;
+            font-size: 9pt;
+        }
+
+        .achievements {
+            list-style-position: inside;
+            margin-left: 0;
+            color: var(--text-color);
+            font-size: 9pt;
+        }
+
+        .achievements li {
+            margin-bottom: 1px;
+            line-height: 1.2;
+        }
+
+        .achievements li::marker {
+            content: "• ";
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            font-size: 9pt;
+        }
+
+        .skill-category {
+            margin-bottom: 5px;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 3px;
+        }
+
+        .skill-items {
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+
+
+        /* Education */
+        .education-item {
+            margin-bottom: 5px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 9.5pt;
+        }
+
+        .institution {
+            color: var(--accent-color);
+            font-size: 9pt;
+        }
+
+        /* Download button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Screen-only styles */
+        @media screen {
+            body {
+                background: #e9ecef;
+                padding: 20px 0;
+            }
+            
+            .cv-container {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 20px auto;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+            
+            .name {
+                font-size: 24pt;
+            }
+            
+            .skills-grid,
+            .projects-grid,
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .download-btn {
+                top: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+    
+    <div class="cv-container" id="cv-content">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">MOONWAR AL WARDIFUL</h1>
+            <p class="title">Software Engineer II</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:nishan.rumc@gmail.com">nishan.rumc@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+8801754007526">+880-1754007526</a>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <a href="https://moonwar.dev" target="_blank">moonwar.dev</a>
+                </div>
+                <div class="contact-item">
+                    <span>💼</span>
+                    <a href="https://linkedin.com/in/moonwar" target="_blank">linkedin.com/in/moonwar</a>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Dhaka, Bangladesh</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Software Engineer II with 3+ years building scalable enterprise applications using .NET Core and Spring Boot. Specialized in microservices architecture, 
+                distributed systems, and cloud technologies. Published researcher with 500+ competitive programming solutions. Led development of critical systems including 
+                Bangladesh Police recruitment platform and Metlife claims processing.
+            </p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="job-title">Software Engineer II</span> | <span class="company">Brain Station-23</span>
+                    </div>
+                    <span class="date">Feb 2023 - Present</span>
+                </div>
+                <ul class="achievements">
+                    <li>Led TRC system development for Bangladesh Police automated recruitment processing</li>
+                    <li>Architected microservices using Docker, RabbitMQ, Redis, and gRPC for scalability</li>
+                    <li>Developed KHAJNA tax system with Spring Boot and PostgreSQL microservices</li>
+                    <li>Built CLiCS claims processing for Metlife with automated validation algorithms</li>
+                    <li>Designed RESTful APIs for cross-platform system integration</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="job-title">Software Engineer Intern</span> | <span class="company">Prime Tech Solutions</span>
+                    </div>
+                    <span class="date">Sept 2022 - Jan 2023</span>
+                </div>
+                <ul class="achievements">
+                    <li>Developed full-stack applications using .NET Core and Angular</li>
+                    <li>Implemented RESTful APIs and third-party service integrations</li>
+                    <li>Collaborated in Agile/SCRUM environment with 2-week sprints</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-items"><strong>Languages:</strong> C#, Java, TypeScript, JavaScript, SQL</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-items"><strong>Frameworks:</strong> ASP.NET Core, Spring Boot, Angular, Entity Framework</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-items"><strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB, Redis, MySQL, Oracle</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-items"><strong>DevOps:</strong> Docker, Azure, RabbitMQ, Git, CI/CD, Jira, gRPC</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="section">
+            <h2 class="section-title">Key Projects</h2>
+            <ul class="achievements">
+                <li><strong>TRC - Bangladesh Police:</strong> Automated recruitment system (.NET Core, Angular, SQL Server) - Oct 2024-Present</li>
+                <li><strong>KHAJNA Tax Management:</strong> Microservices tax system (Spring Boot, Redis, PostgreSQL, Docker) - Jan-Sept 2024</li>
+                <li><strong>CLiCS - Metlife:</strong> Claims processing automation (C#, Web API, Angular, Redis, RabbitMQ) - July-Dec 2023</li>
+                <li><strong>Real-Time Chat:</strong> WebSocket messaging platform (.NET Core, SignalR, Angular, JWT)</li>
+            </ul>
+        </section>
+
+        <!-- Certifications & Education -->
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <p class="summary">
+                <strong>• Scrum for Ops and DevOps</strong> (SCRUMstudy, 2024) <strong>• Scrum Fundamentals</strong> (SCRUMstudy, 2023) 
+                <strong>• Foundational C# with Microsoft</strong> (freeCodeCamp, 2023) <strong>• Jira Fundamentals</strong> (Atlassian, 2022)
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Computer Science & Engineering</div>
+                <div class="institution">East West University, Bangladesh • 2017 - 2022</div>
+            </div>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="section">
+            <h2 class="section-title">Publications & Achievements</h2>
+            <p class="summary">
+                <strong>Research:</strong> "A CNN-Based Strategy to Classify MRI-Based Brain Tumors" - Applied Sciences 2023, DOI: 10.3390/app13010312<br>
+                <strong>Problem Solving:</strong> LeetCode (162), Codeforces (292), Beecrowd (68) - Total 500+ problems solved
+            </p>
+        </section>
+    </div>
+
+    <!-- PDF Generation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('cv-content');
+            
+            // Configure PDF options
+            const opt = {
+                margin: [5, 5, 5, 5],
+                filename: 'Moonwar_Al_Wardiful_CV.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { 
+                    scale: 1.8,
+                    useCORS: true,
+                    letterRendering: true,
+                    scrollY: 0
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait'
+                },
+                pagebreak: { 
+                    mode: 'avoid-all',
+                    before: '.page-break'
+                },
+                enableLinks: true
+            };
+
+            // Generate and download PDF
+            html2pdf().set(opt).from(element).save();
+        }
+
+        // Add keyboard shortcut for PDF download (Ctrl+S or Cmd+S)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                downloadPDF();
+            }
+        });
+    </script>
+</body>
+</html>
